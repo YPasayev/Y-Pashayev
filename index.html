@@ -3,66 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Y. Pashayev - Şəxsi Portfolion</title>
+    <title>Y. Pashayev Portfolio</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #1a1a1a; color: #eee; }
-        nav { background: #000; padding: 15px; text-align: center; position: sticky; top: 0; border-bottom: 2px solid #ff0000; }
-        nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; cursor: pointer; transition: 0.3s; }
-        nav a:hover { color: #ff0000; }
-        .container { background: #222; width: 85%; max-width: 800px; margin: 50px auto; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); min-height: 350px; text-align: center; }
-        .section { display: none; animation: fadeIn 0.6s; }
-        .active { display: block; }
-        h1 { color: #ff0000; text-transform: uppercase; letter-spacing: 2px; }
-        p { line-height: 1.8; font-size: 1.1em; color: #ccc; }
-        .btn { background: #ff0000; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-size: 1em; margin-top: 20px; font-weight: bold; }
-        .btn:hover { background: #cc0000; transform: scale(1.05); transition: 0.2s; }
-        img { border-radius: 10px; margin-top: 25px; max-width: 100%; height: auto; border: 2px solid #333; }
-        @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #111; color: #fff; }
+        nav { background: #000; padding: 15px; text-align: center; border-bottom: 3px solid #e30a17; position: sticky; top: 0; z-index: 100; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        nav a:hover { color: #e30a17; }
+        .container { background: #1a1a1a; width: 90%; max-width: 700px; margin: 40px auto; padding: 30px; border-radius: 15px; box-shadow: 0 0 20px rgba(227, 10, 23, 0.2); text-align: center; border: 1px solid #333; }
+        .section { display: none; }
+        .active { display: block; animation: slideIn 0.4s ease-out; }
+        h1 { color: #e30a17; font-size: 2em; margin-bottom: 10px; }
+        p { color: #ccc; line-height: 1.6; font-size: 1.1em; }
+        .car-img { width: 100%; border-radius: 10px; border: 2px solid #e30a17; margin-top: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        .btn { background: #e30a17; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-weight: bold; margin-top: 20px; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
 <nav>
-    <a onclick="showSection('home')">ANA SƏHİFƏ</a>
-    <a onclick="showSection('about')">HAQQIMDA</a>
-    <a onclick="showSection('cars')">HOUBBİLƏRİM</a>
+    <a onclick="showSection('home')">Ana Səhifə</a>
+    <a onclick="showSection('about')">Haqqımda</a>
+    <a onclick="showSection('hobbiler')">Hobbylərim</a>
 </nav>
 
 <div class="container">
     <div id="home" class="section active">
-        <h1>Xoş Gəlmisiniz</h1>
-        <p>Bu platforma mənim proqram təminatı mühəndisliyi sahəsindəki ilk rəsmi veb layihəmdir.</p>
-        <p>Frontend və Backend məntiqlərini birləşdirərək interaktiv bir mühit yaratmışam.</p>
-        <button class="btn" onclick="showSection('about')">DAHA ÇOX</button>
+        <h1>XOŞ GƏLMİSİNİZ</h1>
+        <p>Mənim fərdi veb-portfolioma baxırsınız. Bu sayt tamamilə mobil uyğunluqlu və interaktiv şəkildə yığılmışdır.</p>
+        <button class="btn" onclick="showSection('about')">Mənim haqqımda öyrən</button>
     </div>
 
     <div id="about" class="section">
-        <h1>Tələbə Məlumatı</h1>
+        <h1>TƏLƏBƏ MƏLUMATI</h1>
         <p><b>Ad Soyad:</b> Y. Pashayev</p>
-        <p><b>Təhsil Müəssisəsi:</b> Bakı Texniki Kolleci (BTK)</p>
-        <p><b>Kurs:</b> 2-ci kurs</p>
-        <p><b>İxtisas:</b> Proqram təminatı mühəndisliyi</p>
-        <p>Gələcəkdə mürəkkəb sistemlərin qurulması və proqramlaşdırılması sahəsində ixtisaslaşmağı hədəfləyirəm.</p>
+        <p><b>Təhsil:</b> Bakı Texniki Kolleci</p>
+        <p><b>İxtisas:</b> Proqram təminatı mühəndisliyi (2-ci kurs)</p>
+        <p>Gələcəyin proqram təminatı mütəxəssisi olaraq innovativ həllər üzərində işləməyi hədəfləyirəm.</p>
     </div>
 
-    <div id="interests" class="section">
-        <h1>Avtomobil Marağım</h1>
-        <p>Mühəndislik möcüzəsi olan yüksək sürətli avtomobillərə marağım böyükdür.</p>
+    <div id="hobbiler" class="section">
+        <h1>AVTOMOBİL MARAĞIM</h1>
+        <p>Mühəndislik və sürətin vəhdəti olan superkarlar mənim ən böyük maraq dairəmdir.</p>
         <p><b>Sevimli Model:</b> Ferrari F8 Tributo</p>
-        <p>Bu model 3.9 litrlik V8 mühərriki və aerodinamik dizaynı ilə seçilir.</p>
-        <img src="https://images.unsplash.com/photo-1592193660027-5831f589949a?q=80&w=1000&auto=format&fit=crop" alt="Ferrari F8 Tributo">
+        <img src="https://images.unsplash.com/photo-1592193660027-5831f589949a?auto=format&fit=crop&q=80&w=1000" class="car-img" alt="Ferrari F8">
     </div>
 </div>
 
 <script>
     function showSection(id) {
-        document.querySelectorAll('.section').forEach(section => {
-            section.classList.remove('active');
+        // Butun bolmeleri gizlet
+        var sections = document.querySelectorAll('.section');
+        sections.forEach(function(sec) {
+            sec.classList.remove('active');
         });
-        if(id === 'interests') {
-            document.getElementById('interests').classList.add('active');
-        } else {
-            document.getElementById(id).classList.add('active');
+        
+        // Secilen bolmeni goster
+        var target = document.getElementById(id);
+        if (target) {
+            target.classList.add('active');
         }
     }
 </script>
