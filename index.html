@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Y. Pashayev Portfolio</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #0a0a0a; color: #fff; }
-        nav { background: #000; padding: 15px; text-align: center; border-bottom: 3px solid #00c3ff; position: sticky; top: 0; z-index: 100; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; cursor: pointer; text-transform: uppercase; font-size: 0.9em; }
-        nav a:hover { color: #00c3ff; }
-        .container { background: #141414; width: 90%; max-width: 700px; margin: 40px auto; padding: 30px; border-radius: 15px; box-shadow: 0 0 25px rgba(0, 195, 255, 0.15); text-align: center; border: 1px solid #222; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #050505; color: #fff; }
+        nav { background: #000; padding: 15px; text-align: center; border-bottom: 3px solid #ff0000; position: sticky; top: 0; z-index: 100; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; cursor: pointer; text-transform: uppercase; font-size: 0.9em; transition: 0.3s; }
+        nav a:hover { color: #ff0000; text-shadow: 0 0 10px #ff0000; }
+        .container { background: #111; width: 90%; max-width: 700px; margin: 40px auto; padding: 30px; border-radius: 10px; box-shadow: 0 0 30px rgba(255, 0, 0, 0.2); text-align: center; border: 1px solid #222; }
         .section { display: none; }
-        .active { display: block; animation: fadeIn 0.5s ease-in; }
-        h1 { color: #00c3ff; font-size: 2.2em; margin-bottom: 10px; letter-spacing: 1px; }
-        p { color: #bbb; line-height: 1.7; font-size: 1.1em; }
-        .car-img { width: 100%; border-radius: 10px; border: 1px solid #333; margin-top: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.6); }
-        .btn { background: #00c3ff; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-weight: bold; margin-top: 20px; text-transform: uppercase; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .active { display: block; animation: fadeIn 0.4s ease-in; }
+        h1 { color: #ff0000; font-size: 2.5em; margin-bottom: 10px; letter-spacing: 2px; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+        p { color: #ddd; line-height: 1.7; font-size: 1.1em; }
+        b { color: #ff0000; }
+        .car-img { width: 100%; border-radius: 5px; border: 2px solid #ff0000; margin-top: 20px; box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); }
+        .btn { background: #ff0000; color: white; border: none; padding: 12px 30px; border-radius: 0px; cursor: pointer; font-weight: bold; margin-top: 20px; text-transform: uppercase; transition: 0.3s; }
+        .btn:hover { background: #cc0000; box-shadow: 0 0 15px #ff0000; }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
     </style>
 </head>
 <body>
@@ -30,9 +32,9 @@
 <div class="container">
     <div id="home" class="section active">
         <h1>XOŞ GƏLMİSİNİZ</h1>
-        <p>Proqram təminatı mühəndisliyi tələbəsi Y. Pashayevin rəsmi veb-portfoliosu.</p>
-        <p>Bu layihə müasir veb standartlarına uyğun olaraq Vercel üzərində quraşdırılmışdır.</p>
-        <button class="btn" onclick="showSection('about')">Məlumatlara bax</button>
+        <p>Proqram təminatı mühəndisliyi tələbəsi <b>Y. Pashayevin</b> rəsmi veb-portfoliosu.</p>
+        <p>Layihə Vercel infrastrukturunda tam funksional və interaktiv şəkildə fəaliyyət göstərir.</p>
+        <button class="btn" onclick="showSection('about')">Məlumatları göstər</button>
     </div>
 
     <div id="about" class="section">
@@ -41,13 +43,13 @@
         <p><b>Təhsil:</b> Bakı Texniki Kolleci</p>
         <p><b>İxtisas:</b> Proqram təminatı mühəndisliyi</p>
         <p><b>Kurs:</b> 2-ci kurs</p>
-        <p>Məqsədim texnologiya dünyasında mürəkkəb sistemlərin qurulması və effektiv proqram həlləri yaratmaqdır.</p>
+        <p>Mühəndislik prinsiplərini tətbiq edərək yüksək keyfiyyətli rəqəmsal məhsullar yaratmaq əsas hədəfimdir.</p>
     </div>
 
     <div id="hobbiler" class="section">
         <h1>AVTOMOBİL MARAĞIM</h1>
         <p><b>Sevimli Model:</b> Porsche 911 GT3 RS</p>
-        <p>Alman mühəndisliyinin zirvəsi, atmosferik mühərrik və mükəmməl aerodinamika.</p>
+        <p>Yarış trekləri üçün hazırlanmış mühəndislik şahəsəri.</p>
         <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=1000&auto=format&fit=crop" class="car-img" alt="Porsche 911 GT3 RS">
     </div>
 </div>
